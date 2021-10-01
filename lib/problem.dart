@@ -4,31 +4,48 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 
 void main() {
+  // Question 1 Install Flutter, make a project by “Flutter create projectname” and then run app by “flutter run”
+  // and take screenshot.
+
+  // Question 1 Answer
+  // https://github.com/AbdulSattarSuleman/Travel-App
+
+  //Question 2 To make a function that take a number as parameter,
+  //and print the table of that number.
+  //Question 2 Answer in lib/views/question_1.dart
+
   // Question 3
-  // int number1 = int.parse(stdin.readLineSync()!);
-  // print(number1);
-  // int number2 = int.parse(stdin.readLineSync()!);
-  // print(number2);
-  // numberDivision(number1, number2);
+  int number1 = int.parse(stdin.readLineSync()!);
+  print(number1);
+  int number2 = int.parse(stdin.readLineSync()!);
+  print(number2);
+  numberDivision(number1, number2);
 
   //Question 4
-  // studentMarksheet();
+  studentMarksheet();
 
   //QUestion 5
-  // StudentData()
-  //   ..studentName()
-  //   ..studentMark();
+  StudentData()
+    ..studentName()
+    ..studentMark();
 
   // Question 6 Print your name in a sentence using classes.
   // ignore: avoid_single_cascade_in_expression_statements
-  // NamePrintClass()..namePrintMethod();
+  NamePrintClass()..namePrintMethod();
 
   // Question7 Make a constructor that requires your name, age, education and then print that.
 
   UserInfo userinfo = UserInfo('Abdul Sattar', 23, 'Graduated');
   print(userinfo);
+
+  // Question 8 Write a Code using inheritance
+
+  DerivedClass derivedClass = DerivedClass();
+  derivedClass.derivedClassMathod();
+  derivedClass.superClassMethod();
 }
 
+// Question 3 details
 numberDivision(number1, number2) {
   List<double>? result1 = [];
   List<double>? result2 = [];
@@ -42,6 +59,7 @@ numberDivision(number1, number2) {
   print(result2[i]);
 }
 
+//Question 4 Detail
 //User Define Function Definition
 studentMarksheet() {
   List<String> studentNames = [
@@ -57,6 +75,7 @@ studentMarksheet() {
   }
 }
 
+// Question 5 Detail
 class StudentData {
   List<String> studentNames = [
     'Abdul Sattar',
@@ -79,6 +98,7 @@ class StudentData {
   }
 }
 
+//Question 6 Detail
 class NamePrintClass {
   String name = "Abdul Sattar Muhammad Suleman";
   namePrintMethod() {
@@ -86,9 +106,25 @@ class NamePrintClass {
   }
 }
 
+//Question 7
 class UserInfo {
   String? userName;
   int? userAge;
   String? education;
   UserInfo(this.userName, this.userAge, this.education);
+}
+
+//Question 8
+
+class SuperClass {
+  void superClassMethod() {
+    print('This is super class method');
+  }
+}
+
+// inherit the super class
+class DerivedClass extends SuperClass {
+  void derivedClassMathod() {
+    print('This is derived Class Mathod');
+  }
 }
